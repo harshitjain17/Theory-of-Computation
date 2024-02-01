@@ -1,0 +1,97 @@
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{geometry, pslatex, fancyhdr, graphicx}
+\usepackage{amsmath,amsthm,amssymb,scrextend}
+\usepackage{multicol}
+\usepackage{tabularx}
+\usepackage[makeroom]{cancel}
+\usepackage{color}
+\geometry{ margin = 1.0in }
+
+%%% TODO modify these variables as per your homework %%%
+\def\homeworknum{1}
+\def\myname{Harshit Jain}
+\def\myuserid{hmj5262}
+%%%%
+
+\pagestyle{fancy}
+\lhead{{\bf CMPSC 464 Spring 2024}}
+\chead{{\bf Assignment~\homeworknum}}
+\rhead{{\bf \today}}
+\let\newproof\proof
+\renewenvironment{proof}{\begin{addmargin}[1em]{0em}\begin{newproof}}{\end{newproof}\end{addmargin}\qed}
+
+\newcounter{problemid}
+\stepcounter{problemid}
+\def\newproblem{\clearpage\newpage{\bf Problem~\arabic{problemid}\stepcounter{problemid}}\hfill\par}
+
+\setlength\parindent{0em} 
+\setlength\parskip{8pt}
+\setlength{\fboxsep}{6pt}
+
+
+\begin{document}
+
+\framebox[\textwidth]{
+	\parbox{0.96\textwidth}{
+		\parbox{0.12\textwidth}{\bf Name:}\parbox{0.6\textwidth}{\myname}\\
+		\parbox{0.12\textwidth}{\bf User ID:}\parbox{0.6\textwidth}{\myuserid}
+	}
+}
+%% your solutions %%%
+
+
+% PROBLEM 1
+\newproblem 
+\begin{enumerate}
+    \item 
+    Let's suppose $\sqrt{13}$ is a rational number. Then we can write it $\sqrt{13} = \frac{a}{b}$ where $a, b$ are whole numbers, $b$ not zero.
+
+    We additionally assume that this $\frac{a}{b}$ is simplified to lowest terms, since that can obviously be done with any fraction. Notice that in order for $\frac{a}{b}$ to be in simplest terms, both of $a$ and $b$ cannot be even. One or both must be odd. Otherwise, we could simplify $\frac{a}{b}$ further.
+
+    From the equality $\sqrt{13} = \frac{a}{b}$ it follows that $13 = \frac{a^2}{b^2}$,  or  $a^2 = 13b^2$. Since $13$ is prime and $a^2$ is a multiple of $13$, then $a$ is multiple of $13$.
+
+    If we substitute $a = 13k$ into the original equation $\sqrt{13} = \frac{a}{b}$, we get:
+
+    $\Rightarrow (13k)^2 = 13b^2$
+
+    $\Rightarrow b^2 = 13k^2$
+
+    Since $13$ is prime and $b^2$ is a multiple of $13$ then $b$ is multiple of $13$.
+
+    We now have a contradiction since $a$ and $b$ must have no common factors (except $1$) but we have proved that if $\frac{a}{b}$ exits then $a$ and $b$ must have common factor $13$.
+    
+    So $\frac{a}{b}$ can not exist and the square root of $13$ is irrational.
+    
+    \item Yes, we can prove that square root of any prime number is irrational.
+
+    Let's suppose $\sqrt{p}$ is a rational number, where $p$ is any prime number. Let $\sqrt{p} = \frac{m}{n}$ where $m,n \in N$. and $m$ and $n$ have no factors in common.
+
+    Now $p = \frac{m^2}{n^2}$,  or  $m^2 = pn^2$.
+    
+    Since $p$ is prime and $m^2$ is a multiple of $p$ then $m$ is multiple of $p$.
+    
+    If we substitute $m = pk$ into the original equation $\sqrt{p} = \frac{m}{n}$, we get:
+    
+    $\Rightarrow (pk)^2 = pn^2$
+
+    $\Rightarrow n^2 = pk^2$
+    
+    Since $p$ is prime and $n^2$ is a multiple of $p$ then $n$ is multiple of $p$.
+    
+    We now have a contradiction since $m$ and $n$ must have no common factors (except $1$) but we have proved that if $\frac{m}{n}$ exits then $m$ and $n$ must have common factor $p$.
+    
+    So $\frac{m}{n}$ can not exist and the square root of any prime is irrational.
+
+\end{enumerate}
+
+% PROBLEM 2
+\newproblem 
+% \includegraphics[scale = 0.60]{5.1}
+\begin{enumerate}
+
+    \item 
+
+\end{enumerate}
+
+\end{document}
