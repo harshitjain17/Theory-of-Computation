@@ -155,6 +155,34 @@ $\delta =$
 
 % PROBLEM 4
 \newproblem
+From the given NFA, we will make the transition table, $\delta_{NFA} = $
+\begin{tabular}{c|cccc}
+    & a & b \\
+    \hline
+    $1$ & $\{1,2\}$ & $2$ \\
+    $2$ & $\phi$ & $1$ \\
+\end{tabular}
+
+From here, we can make an equivalent DFA transition table as follows, $\delta_{DFA} = $
+\begin{tabular}{c|cccc}
+    & a & b \\
+    \hline
+    $1$ & $12$ & $2$ \\
+    $12$ & $12$ & $12$ \\
+    $2$ & $D$ & $1$ \\
+    $D$ & $D$ & $D$ \\
+\end{tabular}
+
+\underline{States:}
+    \begin{itemize}
+        \item $1$ (Start state and Accept State)
+        \item $12$ (Accept state)
+        \item $D$ (Dead state for any other invalid string)
+    \end{itemize}
+
+So, the converted DFA is as follows:
+
+\includegraphics[scale = 0.20]{4}
 
 % PROBLEM 5
 \newproblem

@@ -1,8 +1,9 @@
 # Fdb version 3
-["pdflatex"] 1706844353 "f:/US Documents_2/Classes/7_Spring 2024/CMPSC 464/Homework1/homework1.tex" "homework1.pdf" "homework1" 1706844358
+["pdflatex"] 1706845024 "f:/US Documents_2/Classes/7_Spring 2024/CMPSC 464/Homework1/homework1.tex" "homework1.pdf" "homework1" 1706845027
   "2.jpg" 1706836506 141007 abbedf314cce5afd1e3f1085c55e0413 ""
   "3a.jpg" 1706842025 144209 c077e91c743197751930e299546b2f35 ""
   "3b.jpg" 1706842025 171119 1036fd121ac8528dfaff058d8356b337 ""
+  "4.jpg" 1706844978 157390 85076b7205bb7297572e76662596f514 ""
   "C:/Users/DELL/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1675117200 84933 775d3cbd7593b6d2e57cdc8aab4f2992 ""
   "C:/Users/DELL/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1645210004 9769493 fa2a77e8186b1700d56a6f313785a47b ""
   "C:/Users/DELL/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc" 1458470287 4993 80dc9bab7f31fb78a000ccfed0e27cab ""
@@ -86,9 +87,9 @@
   "C:/Users/DELL/AppData/Local/Programs/MiKTeX/tex/latex/tools/array.sty" 1636710260 12694 6c23725d50ab9d1e2d3ce482c58ffcf3 ""
   "C:/Users/DELL/AppData/Local/Programs/MiKTeX/tex/latex/tools/multicol.sty" 1636710260 32262 2bb622a0aa56c4a7a5cbdfe9d122c15a ""
   "C:/Users/DELL/AppData/Local/Programs/MiKTeX/tex/latex/tools/tabularx.sty" 1636710260 7147 5ac8a9ef36411064b1a501137af0fa54 ""
-  "f:/US Documents_2/Classes/7_Spring 2024/CMPSC 464/Homework1/homework1.tex" 1706844350 6478 5e044bbd1a5e17a5be6195d8cf9fb28d ""
-  "homework1.aux" 1706844358 68 a4e0f1d98bb847c158f720279c3bd54f "pdflatex"
-  "homework1.tex" 1706844350 6478 5e044bbd1a5e17a5be6195d8cf9fb28d ""
+  "f:/US Documents_2/Classes/7_Spring 2024/CMPSC 464/Homework1/homework1.tex" 1706845021 7222 fc7c3150a1e3d378791e7abc6d22f77b ""
+  "homework1.aux" 1706845026 68 a4e0f1d98bb847c158f720279c3bd54f "pdflatex"
+  "homework1.tex" 1706845021 7222 fc7c3150a1e3d378791e7abc6d22f77b ""
   (generated)
   "homework1.aux"
   "homework1.log"
