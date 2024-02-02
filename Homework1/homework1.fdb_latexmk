@@ -1,5 +1,6 @@
 # Fdb version 3
-["pdflatex"] 1706743512 "f:/US Documents_2/Classes/7_Spring 2024/CMPSC 464/Homework1/homework1.tex" "homework1.pdf" "homework1" 1706743514
+["pdflatex"] 1706837009 "f:/US Documents_2/Classes/7_Spring 2024/CMPSC 464/Homework1/homework1.tex" "homework1.pdf" "homework1" 1706837014
+  "2.jpg" 1706836506 141007 abbedf314cce5afd1e3f1085c55e0413 ""
   "C:/Users/DELL/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1675117200 84933 775d3cbd7593b6d2e57cdc8aab4f2992 ""
   "C:/Users/DELL/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1645210004 9769493 fa2a77e8186b1700d56a6f313785a47b ""
   "C:/Users/DELL/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc" 1458470287 4993 80dc9bab7f31fb78a000ccfed0e27cab ""
@@ -25,6 +26,7 @@
   "C:/Users/DELL/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb" 1247593067 36299 5f9df58c2139e7edcf37c8fca4bd384d ""
   "C:/Users/DELL/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb" 1247593067 35752 024fb6c41858982481f6968b5fc26508 ""
   "C:/Users/DELL/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb" 1247593067 32569 5e5ddc8df908dea60932f3c484a54c0d ""
+  "C:/Users/DELL/AppData/Local/Programs/MiKTeX/fonts/type1/urw/symbol/usyr.pfb" 1136871348 33709 b09d2e140b7e807d3a97058263ab6693 ""
   "C:/Users/DELL/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmb8a.pfb" 1136871348 44729 fea0975e20ec51c992338362f05f1146 ""
   "C:/Users/DELL/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmr8a.pfb" 1136871348 46026 687528a208fbfc1f00832bb96cccebbb ""
   "C:/Users/DELL/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmri8a.pfb" 1136871348 45458 504e2b06fa82109d168c7a0afb09e145 ""
@@ -78,9 +80,9 @@
   "C:/Users/DELL/AppData/Local/Programs/MiKTeX/tex/latex/tools/array.sty" 1636710260 12694 6c23725d50ab9d1e2d3ce482c58ffcf3 ""
   "C:/Users/DELL/AppData/Local/Programs/MiKTeX/tex/latex/tools/multicol.sty" 1636710260 32262 2bb622a0aa56c4a7a5cbdfe9d122c15a ""
   "C:/Users/DELL/AppData/Local/Programs/MiKTeX/tex/latex/tools/tabularx.sty" 1636710260 7147 5ac8a9ef36411064b1a501137af0fa54 ""
-  "f:/US Documents_2/Classes/7_Spring 2024/CMPSC 464/Homework1/homework1.tex" 1706743510 3484 37a862d27af92b66b6f7dba4a2a02363 ""
-  "homework1.aux" 1706743514 68 fea7eea1a0d8a583c281a353f186aaaa "pdflatex"
-  "homework1.tex" 1706743510 3484 37a862d27af92b66b6f7dba4a2a02363 ""
+  "f:/US Documents_2/Classes/7_Spring 2024/CMPSC 464/Homework1/homework1.tex" 1706837002 4446 31f67e20adbcb528e82bc6b6feabcc35 ""
+  "homework1.aux" 1706837014 68 2bbeae3fdac4266239ac2b30d4527496 "pdflatex"
+  "homework1.tex" 1706837002 4446 31f67e20adbcb528e82bc6b6feabcc35 ""
   (generated)
   "homework1.aux"
   "homework1.log"

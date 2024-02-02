@@ -86,12 +86,58 @@
 \end{enumerate}
 
 % PROBLEM 2
-\newproblem 
-% \includegraphics[scale = 0.60]{5.1}
+\newproblem
+$Q = \{ q_0, q_1, q_2, q_3 \}$
+
+$q_0:$ Initial state, state after reading a digit that leaves a remainder of $0$ when divided by $4$ \\
+$q_1:$ State after reading a digit that leaves a remainder of $1$ when divided by $4$ \\
+$q_2:$ State after reading a digit that leaves a remainder of $2$ when divided by $4$ \\
+$q_3:$ State after reading a digit that leaves a remainder of $3$ when divided by $4$
+
+$\Sigma = \{ 0, 1, 2, 3 \}$
+
+$q_0 = \{ q_0 \}$ (Start State)
+
+$F = \{ q_0 \}$ (Accept State)
+
+$\delta =$ 
+\begin{tabular}{c|cccc}
+    & 0 & 1 & 2 & 3 \\
+    \hline
+    $q_0$ & $q_0$ & $q_1$ & $q_2$ & $q_3$ \\
+    $q_1$ & $q_0$ & $q_1$ & $q_2$ & $q_3$ \\
+    $q_2$ & $q_0$ & $q_2$ & $q_0$ & $q_2$ \\
+    $q_3$ & $q_0$ & $q_3$ & $q_2$ & $q_1$ \\
+\end{tabular}
+
+\includegraphics[scale = 0.20]{2}
+
+% PROBLEM 3
+\newproblem
 \begin{enumerate}
+    \item 
+
 
     \item 
 
+
 \end{enumerate}
 
+% PROBLEM 4
+\newproblem
+
+
+% PROBLEM 5
+\newproblem
+\begin{enumerate}
+    \item 
+
+
+    \item 
+
+
+    \item 
+
+
+\end{enumerate}
 \end{document}
