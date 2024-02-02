@@ -187,13 +187,39 @@ So, the converted DFA is as follows:
 % PROBLEM 5
 \newproblem
 \begin{enumerate}
+    \item Every regular language can be recognized by a DFA. Since a DFA is a special case of an NFA, we can convert any DFA recognizing a regular language into a 4NFA by replicating the accept states.
+
+    Given a DFA \(M = (Q, \Sigma, \delta, q_0, F)\), we can construct a 4NFA, \(M' = (Q', \Sigma, \delta', q_0, F')\) as follows:
+    
+    \begin{itemize}
+        \item Let \(Q' = Q \times \{1, 2, 3, 4\}\), where each state \(q \in Q\) is replicated four times with different indices.
+        \item Define \(\delta'\) such that for each transition \(\delta(q, a) = p\), where \(q, p \in Q\) and \(a \in \Sigma\), we have \(\delta'((q, i), a) = (p, i+1)\) for \(i = 1, 2, 3\). Additionally, \(\delta'((q, 4), a) = (p, 1)\).
+        \item Let \(F' = \{(p, i) \mid p \in F, i = 4\}\), i.e., the accept states are the ones in the last replication.
+    \end{itemize}
+    
+    This construction ensures that in the 4NFA \(M'\), at least four branches must have reached an accept state.
+
     \item 
 
+    To establish that every language recognized by a 4NFA is regular, we need to demonstrate that we can convert any 4NFA into an equivalent DFA.
+    
+    Given a 4NFA, \(M = (Q, \Sigma, \delta, q_0, F)\), we can construct an equivalent DFA \(D = (Q', \Sigma, \delta', q_0', F')\) as follows:
+    
+    \begin{itemize}
+        \item The states of \(D\) are subsets of the states of \(M\). Formally, \(Q' = 2^Q\) (the power set of \(Q\)).
+        \item For each state \(S \in Q'\) and input symbol \(a \in \Sigma\):
+        
+            - Let \(S' = \bigcup_{q \in S} \delta(q, a)\).
+            
+            - Define \(\delta'(S, a) = S'\).
+        \item \(q_0' = \{q_0\}\) (the set containing the initial state of \(M\)).
+        \item \(F' = \{S \in Q' \mid |S \cap F| \geq 4\}\) (the sets with at least four states from \(F\) in them).
+    \end{itemize}
 
-    \item 
+    This construction guarantees that every language recognized by a 4NFA can also be recognized by a DFA. Thus, the language recognized by a 4NFA is regular.
 
+    \item The number $4$ is somewhat arbitrary in this context. The concept of \(k\)-NFAs (for \(k > 1\)) implies that more than one branch must reach an accept state for acceptance. The specific choice of 4 in the question might be used to emphasize that more than a single branch must reach an accept state, but other values of \(k\) (e.g., 3NFA or 5NFA) would still capture the idea that multiple branches are required for acceptance. The key is that \(k\)-NFAs allow for multiple paths to acceptance, making them more expressive than traditional NFAs or DFAs.
 
-    \item 
 
 
 \end{enumerate}

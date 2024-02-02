@@ -1,5 +1,5 @@
 # Fdb version 3
-["pdflatex"] 1706845024 "f:/US Documents_2/Classes/7_Spring 2024/CMPSC 464/Homework1/homework1.tex" "homework1.pdf" "homework1" 1706845027
+["pdflatex"] 1706851667 "f:/US Documents_2/Classes/7_Spring 2024/CMPSC 464/Homework1/homework1.tex" "homework1.pdf" "homework1" 1706851670
   "2.jpg" 1706836506 141007 abbedf314cce5afd1e3f1085c55e0413 ""
   "3a.jpg" 1706842025 144209 c077e91c743197751930e299546b2f35 ""
   "3b.jpg" 1706842025 171119 1036fd121ac8528dfaff058d8356b337 ""
@@ -20,10 +20,12 @@
   "C:/Users/DELL/AppData/Local/Programs/MiKTeX/fonts/tfm/adobe/times/zptmcmrm.tfm" 1136790254 2020 e970c1df148989ada67768f62533fb70 ""
   "C:/Users/DELL/AppData/Local/Programs/MiKTeX/fonts/tfm/adobe/times/zpzccmry.tfm" 1136790254 1592 9cf7d6bd275cdad1ddc3affbde20c2cc ""
   "C:/Users/DELL/AppData/Local/Programs/MiKTeX/fonts/tfm/adobe/zapfchan/pzcmi8r.tfm" 1136790254 3520 74c182562270529cb43f51d7c7d9f1d9 ""
+  "C:/Users/DELL/AppData/Local/Programs/MiKTeX/fonts/tfm/public/amsfonts/cmextra/cmex9.tfm" 1234365220 996 a18840b13b499c08ac2de96a99eda4bc ""
   "C:/Users/DELL/AppData/Local/Programs/MiKTeX/fonts/tfm/public/amsfonts/symbols/msam10.tfm" 1233951854 916 f87d7c45f9c908e672703b83b72241a3 ""
   "C:/Users/DELL/AppData/Local/Programs/MiKTeX/fonts/tfm/public/amsfonts/symbols/msam7.tfm" 1233951854 928 2dc8d444221b7a635bb58038579b861a ""
   "C:/Users/DELL/AppData/Local/Programs/MiKTeX/fonts/tfm/public/amsfonts/symbols/msbm10.tfm" 1233951854 908 2921f8a10601f252058503cc6570e581 ""
   "C:/Users/DELL/AppData/Local/Programs/MiKTeX/fonts/tfm/public/amsfonts/symbols/msbm7.tfm" 1233951854 940 228d6584342e91276bf566bcf9716b83 ""
+  "C:/Users/DELL/AppData/Local/Programs/MiKTeX/fonts/tfm/public/cm/cmex10.tfm" 1136765053 992 662f679a0b3d2d53c1b94050fdaa3f50 ""
   "C:/Users/DELL/AppData/Local/Programs/MiKTeX/fonts/tfm/public/cm/cmmi10.tfm" 1136765053 1528 abec98dbc43e172678c11b3b9031252a ""
   "C:/Users/DELL/AppData/Local/Programs/MiKTeX/fonts/tfm/public/cm/cmr10.tfm" 1136765053 1296 45809c5a464d5f32c8f98ba97c1bb47f ""
   "C:/Users/DELL/AppData/Local/Programs/MiKTeX/fonts/tfm/public/cm/cmr12.tfm" 1136765053 1288 655e228510b4c2a1abe905c368440826 ""
@@ -31,6 +33,7 @@
   "C:/Users/DELL/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb" 1247593067 36299 5f9df58c2139e7edcf37c8fca4bd384d ""
   "C:/Users/DELL/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb" 1247593067 35752 024fb6c41858982481f6968b5fc26508 ""
   "C:/Users/DELL/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb" 1247593067 32569 5e5ddc8df908dea60932f3c484a54c0d ""
+  "C:/Users/DELL/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cmextra/cmex9.pfb" 1247593070 30212 f7062d6da71d1ec66ffb8906891648f7 ""
   "C:/Users/DELL/AppData/Local/Programs/MiKTeX/fonts/type1/urw/symbol/usyr.pfb" 1136871348 33709 b09d2e140b7e807d3a97058263ab6693 ""
   "C:/Users/DELL/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmb8a.pfb" 1136871348 44729 fea0975e20ec51c992338362f05f1146 ""
   "C:/Users/DELL/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmr8a.pfb" 1136871348 46026 687528a208fbfc1f00832bb96cccebbb ""
@@ -38,6 +41,7 @@
   "C:/Users/DELL/AppData/Local/Programs/MiKTeX/fonts/vf/adobe/times/ptmb7t.vf" 1136790254 1372 788387fea833ef5963f4c5bffe33eb89 ""
   "C:/Users/DELL/AppData/Local/Programs/MiKTeX/fonts/vf/adobe/times/ptmr7t.vf" 1136790254 1380 0ea3a3370054be6da6acd929ec569f06 ""
   "C:/Users/DELL/AppData/Local/Programs/MiKTeX/fonts/vf/adobe/times/ptmr8c.vf" 1136790254 3556 8a9a6dcbcd146ef985683f677f4758a6 ""
+  "C:/Users/DELL/AppData/Local/Programs/MiKTeX/fonts/vf/adobe/times/zpsycmrv.vf" 1136790254 1008 0a00b02ba36424c2a12d0eec979f9f46 ""
   "C:/Users/DELL/AppData/Local/Programs/MiKTeX/fonts/vf/adobe/times/zptmcmr.vf" 1136790254 1108 d271d6f9de4122c3f8d3b65666167fac ""
   "C:/Users/DELL/AppData/Local/Programs/MiKTeX/fonts/vf/adobe/times/zptmcmrm.vf" 1136790254 1084 cee5e07a9485d7c583d017cd2ff06934 ""
   "C:/Users/DELL/AppData/Local/Programs/MiKTeX/fonts/vf/adobe/times/zpzccmry.vf" 1136790254 968 23217b5a66d2f57bfa4b2948009646b3 ""
@@ -87,9 +91,9 @@
   "C:/Users/DELL/AppData/Local/Programs/MiKTeX/tex/latex/tools/array.sty" 1636710260 12694 6c23725d50ab9d1e2d3ce482c58ffcf3 ""
   "C:/Users/DELL/AppData/Local/Programs/MiKTeX/tex/latex/tools/multicol.sty" 1636710260 32262 2bb622a0aa56c4a7a5cbdfe9d122c15a ""
   "C:/Users/DELL/AppData/Local/Programs/MiKTeX/tex/latex/tools/tabularx.sty" 1636710260 7147 5ac8a9ef36411064b1a501137af0fa54 ""
-  "f:/US Documents_2/Classes/7_Spring 2024/CMPSC 464/Homework1/homework1.tex" 1706845021 7222 fc7c3150a1e3d378791e7abc6d22f77b ""
-  "homework1.aux" 1706845026 68 a4e0f1d98bb847c158f720279c3bd54f "pdflatex"
-  "homework1.tex" 1706845021 7222 fc7c3150a1e3d378791e7abc6d22f77b ""
+  "f:/US Documents_2/Classes/7_Spring 2024/CMPSC 464/Homework1/homework1.tex" 1706851665 9789 2bb5076c78b1d8b1e0b2ecc52ab6223b ""
+  "homework1.aux" 1706851670 68 a4e0f1d98bb847c158f720279c3bd54f "pdflatex"
+  "homework1.tex" 1706851665 9789 2bb5076c78b1d8b1e0b2ecc52ab6223b ""
   (generated)
   "homework1.aux"
   "homework1.log"

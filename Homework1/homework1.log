@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 21.12) (preloaded format=pdflatex 2022.2.18)  1 FEB 2024 22:37
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 21.12) (preloaded format=pdflatex 2022.2.18)  2 FEB 2024 00:27
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -480,6 +480,10 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 [6
 
  <./4.jpg>]
+Overfull \hbox (2.98586pt too wide) in paragraph at lines 206--207
+[]\OT1/ptm/m/n/12 Given a 4NFA, $\OML/ptmcm/m/it/12 M \OT1/ptmcm/m/n/12 = (\OML/ptmcm/m/it/12 Q; \OT1/ptmcm/m/n/12 \OML/ptmcm/m/it/12 ; ; q[]; F\OT1/ptmcm/m/n/12 )$\OT1/ptm/m/n/12 , we can con-struct an equiv-a-lent DFA $\OML/ptmcm/m/it/12 D \OT1/ptmcm/m/n/12 = (\OML/ptmcm/m/it/12 Q[]; \OT1/ptmcm/m/n/12 \OML/ptmcm/m/it/12 ; []; q[]; F[]\OT1/ptmcm/m/n/12 )$
+ []
+
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -491,17 +495,17 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 ] (homework1.aux) ) 
 Here is how much of TeX's memory you used:
- 4902 strings out of 478659
- 79634 string characters out of 2846394
+ 4907 strings out of 478659
+ 79662 string characters out of 2846394
  407890 words of memory out of 3000000
  22915 multiletter control sequences out of 15000+600000
- 424140 words of font info for 70 fonts, out of 8000000 for 9000
+ 426032 words of font info for 75 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 108i,11n,106p,429b,318s stack positions out of 5000i,500n,10000p,200000b,80000s
-{C:/Users/DELL/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc}<C:/Users/DELL/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/DELL/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/DELL/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/DELL/AppData/Local/Programs/MiKTeX/fonts/type1/urw/symbol/usyr.pfb><C:/Users/DELL/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><C:/Users/DELL/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/Users/DELL/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
-Output written on homework1.pdf (7 pages, 697341 bytes).
+ 108i,11n,106p,660b,318s stack positions out of 5000i,500n,10000p,200000b,80000s
+{C:/Users/DELL/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc}<C:/Users/DELL/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cmextra/cmex9.pfb><C:/Users/DELL/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/DELL/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/DELL/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/DELL/AppData/Local/Programs/MiKTeX/fonts/type1/urw/symbol/usyr.pfb><C:/Users/DELL/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><C:/Users/DELL/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/Users/DELL/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
+Output written on homework1.pdf (7 pages, 710457 bytes).
 PDF statistics:
- 66 PDF objects out of 1000 (max. 8388607)
+ 71 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  21 words of extra memory for PDF output out of 10000 (max. 10000000)
 
