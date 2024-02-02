@@ -1,4 +1,4 @@
-\documentclass[letterpaper,11pt]{article}
+\documentclass[letterpaper,12pt]{article}
 
 \usepackage{geometry, pslatex, fancyhdr, graphicx}
 \usepackage{amsmath,amsthm,amssymb,scrextend}
@@ -116,16 +116,45 @@ $\delta =$
 \newproblem
 \begin{enumerate}
     \item 
+    Assume there exists a DFA over the alphabet $\{ 0, 1 \}$ that recognizes the language $L = \{ 1 \}$ with less than three states.
 
+    A DFA has states, transitions, an initial state, and accepting states. Let's analyze the possibilities:
+
+    \begin{itemize}
+        \item We must have at least one start state. Let the start state be $q_0$.
+        \item For the string $1$, there must be an accepting state. Let this state be $q_1$.
+        \item Let's introduce a dead state to $q_{dead}$ handle strings other than $1$. This state will be a non-accepting state, and we can transition to it from $q_0$ to $q_1$ on input $0$ or $1$.
+    \end{itemize}
+
+    Now, this DFA has three states: $q_0$, $q_1$, and $q_{dead}$. It ensures that only the string "1" is accepted, and all other strings lead to the dead state.
+
+    Therefore, we have shown that it is impossible to create a DFA with less than three states that recognizes the language $L = \{ 1 \}$, and we need at least three states, including a dead state, to handle strings other than 1.
+    
+    \includegraphics[scale = 0.20]{3a}
 
     \item 
+    Yes, the DFA over the alphabet $\{ 1 \}$ that recognizes the language $L = \{ 1 \}$ needs to have at least three states.
 
+    \underline{States:}
+    \begin{itemize}
+        \item $q_0$ (Start state)
+        \item $q_1$ (Accept state for the valid string 1)
+        \item $q_{dead}$ (Dead state for any other invalid string)
+    \end{itemize}
 
+    \underline{Transitions:}
+    \begin{itemize}
+        \item From $q_0$, on input $1$, transition to $q_1$
+        \item From $q_1$, on input $1$, transition to $q_{dead}$
+    \end{itemize}
+
+    This DFA ensures that only the string $1$ is accepted (transitioning from $q_0$ to $q_1$), and any additional $1$s are rejected by transitioning to the dead state $q_{dead}$. Thus, a minimum of three states is required to handle both acceptance and rejection of strings in the language $L = \{ 1 \}$ over the alphabet $\{ 1 \}$.
+
+    \includegraphics[scale = 0.20]{3b}
 \end{enumerate}
 
 % PROBLEM 4
 \newproblem
-
 
 % PROBLEM 5
 \newproblem
