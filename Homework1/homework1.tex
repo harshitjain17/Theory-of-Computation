@@ -38,6 +38,8 @@
 		\parbox{0.12\textwidth}{\bf User ID:}\parbox{0.6\textwidth}{\myuserid}
 	}
 }
+
+I collaborated with Yug Jarodiya and Beniamin Margaryan.
 %% your solutions %%%
 
 
@@ -89,14 +91,14 @@
 \newproblem
 $Q = \{ q_0, q_1, q_2, q_3 \}$
 
-$q_0:$ Initial state, state after reading a digit that leaves a remainder of $0$ when divided by $4$ \\
-$q_1:$ State after reading a digit that leaves a remainder of $1$ when divided by $4$ \\
+$q_0:$ State after reading a digit that leaves a remainder of $0$ when divided by $4$ \\
+$q_1:$ Initial State, State after reading a digit that leaves a remainder of $1$ when divided by $4$ \\
 $q_2:$ State after reading a digit that leaves a remainder of $2$ when divided by $4$ \\
 $q_3:$ State after reading a digit that leaves a remainder of $3$ when divided by $4$
 
 $\Sigma = \{ 0, 1, 2, 3 \}$
 
-$q_0 = \{ q_0 \}$ (Start State)
+$q_0 = \{ q_1 \}$ (Start State)
 
 $F = \{ q_0 \}$ (Accept State)
 
@@ -104,7 +106,7 @@ $\delta =$
 \begin{tabular}{c|cccc}
     & 0 & 1 & 2 & 3 \\
     \hline
-    $q_0$ & $q_0$ & $q_1$ & $q_2$ & $q_3$ \\
+    $q_0$ & $q_0$ & $q_0$ & $q_0$ & $q_0$ \\
     $q_1$ & $q_0$ & $q_1$ & $q_2$ & $q_3$ \\
     $q_2$ & $q_0$ & $q_2$ & $q_0$ & $q_2$ \\
     $q_3$ & $q_0$ & $q_3$ & $q_2$ & $q_1$ \\
@@ -187,38 +189,35 @@ So, the converted DFA is as follows:
 % PROBLEM 5
 \newproblem
 \begin{enumerate}
-    \item Every regular language can be recognized by a DFA. Since a DFA is a special case of an NFA, we can convert any DFA recognizing a regular language into a 4NFA by replicating the accept states.
-
-    Given a DFA \(M = (Q, \Sigma, \delta, q_0, F)\), we can construct a 4NFA, \(M' = (Q', \Sigma, \delta', q_0, F')\) as follows:
-    
-    \begin{itemize}
-        \item Let \(Q' = Q \times \{1, 2, 3, 4\}\), where each state \(q \in Q\) is replicated four times with different indices.
-        \item Define \(\delta'\) such that for each transition \(\delta(q, a) = p\), where \(q, p \in Q\) and \(a \in \Sigma\), we have \(\delta'((q, i), a) = (p, i+1)\) for \(i = 1, 2, 3\). Additionally, \(\delta'((q, 4), a) = (p, 1)\).
-        \item Let \(F' = \{(p, i) \mid p \in F, i = 4\}\), i.e., the accept states are the ones in the last replication.
-    \end{itemize}
-    
-    This construction ensures that in the 4NFA \(M'\), at least four branches must have reached an accept state.
-
+    \item I am going for $30\%$
     \item 
+    (adapted from Textbook- Page 55)
 
-    To establish that every language recognized by a 4NFA is regular, we need to demonstrate that we can convert any 4NFA into an equivalent DFA.
-    
-    Given a 4NFA, \(M = (Q, \Sigma, \delta, q_0, F)\), we can construct an equivalent DFA \(D = (Q', \Sigma, \delta', q_0', F')\) as follows:
-    
+    PROOF. Let \(N = (Q, \Sigma, \delta, q_0, F)\) be the NFA recognizing some language \(A\). We construct a DFA \(M = (Q', \Sigma, \delta', q_0', F')\) recognizing \(A\). Suppose \(N\) has no \(\varepsilon\) arrows.
+
     \begin{itemize}
-        \item The states of \(D\) are subsets of the states of \(M\). Formally, \(Q' = 2^Q\) (the power set of \(Q\)).
-        \item For each state \(S \in Q'\) and input symbol \(a \in \Sigma\):
+        \item \(Q' = P(Q)\). Every state of \(M\) is a set of states of \(N\). Recall that \(P(Q)\) is the set of subsets of \(Q\).
         
-            - Let \(S' = \bigcup_{q \in S} \delta(q, a)\).
-            
-            - Define \(\delta'(S, a) = S'\).
-        \item \(q_0' = \{q_0\}\) (the set containing the initial state of \(M\)).
-        \item \(F' = \{S \in Q' \mid |S \cap F| \geq 4\}\) (the sets with at least four states from \(F\) in them).
+        \item For \(R \in Q'\) and \(a \in \Sigma\), let \(\delta'(R, a) = \{q \in Q | q \in \delta(r, a) \text{ for some } r \in R\}\). If \(R\) is a state of \(M\), it is also a set of states of \(N\). When \(M\) reads a symbol \(a\) in state \(R\), it shows where \(a\) takes each state in \(R\). Because each state may go to a set of states, we take the union of all these sets. Another way to write this expression is:
+        \[\delta'(R, a) = \bigcup_{r \in R} \delta(r, a)\]
+
+        \item \(q_0' = \{q_0\}\). \(M\) starts in the state corresponding to the collection containing just the start state of \(N\).
+
+        \item \(F' = \{R \in Q' | R \text{ contains 4 accept states of } N\}\). The machine \(M\) accepts if 4 of the possible states that \(N\) could be in at this point is an accept state.
     \end{itemize}
+    Now we need to suppose that there are \(\varepsilon\) arrows. For any state \(R\) of \(M\), we define \(E(R)\) to be the collection of states that can be reached from members of \(R\) by going only along \(\varepsilon\) arrows, including the members of \(R\) themselves. Formally, for \(R \subseteq Q\) let:
+    \[E(R) = \{q | q \text{ can be reached from } R \text{ by traveling along 0 or more } \varepsilon \text{ arrows}\}.\]
+    
+    Then we modify the transition function of \(M\) to place additional fingers on all states that can be reached by going along \(\varepsilon\) arrows after every step. Replacing \(\delta(r, a)\) by \(E(\delta(r, a))\) achieves this effect. Thus:
+    \[\delta'(R, a) = \{q \in Q | q \in E(\delta(r, a)) \text{ for some } r \in R\}.\]
 
-    This construction guarantees that every language recognized by a 4NFA can also be recognized by a DFA. Thus, the language recognized by a 4NFA is regular.
+    Additionally, we need to modify the start state of \(M\) to move the fingers initially to all possible states that can be reached from the start state of \(N\) along the \(\varepsilon\) arrows. Changing \(q_0'\) to be \(E(\{q_0\})\) achieves this effect. We have now completed the construction of the DFA \(M\) that simulates the NFA \(N\).
 
-    \item The number $4$ is somewhat arbitrary in this context. The concept of \(k\)-NFAs (for \(k > 1\)) implies that more than one branch must reach an accept state for acceptance. The specific choice of 4 in the question might be used to emphasize that more than a single branch must reach an accept state, but other values of \(k\) (e.g., 3NFA or 5NFA) would still capture the idea that multiple branches are required for acceptance. The key is that \(k\)-NFAs allow for multiple paths to acceptance, making them more expressive than traditional NFAs or DFAs.
+    The construction of \(M\) obviously works correctly. At every step in the computation of \(M\) on an input, it clearly enters a state that corresponds to the subset of states that \(N\) could be in at that point. Thus, our proof is complete.
+
+    \item No, there is nothing inherently special about the number $4$ in the context of \(k\)-NFAs. The choice of $4$ in the question is arbitrary, and the same concept applies to \(k\)-NFAs for any \(k > 1\), including 3NFA or 5NFA.
+    
+    For any \(k\)-NFA, where \(k > 1\), the idea is that multiple branches or paths must reach an accept state for the input string to be accepted. If the question used 3NFA, the requirement would be that at least $3$ branches must reach an accept state. If it used 5NFA, the requirement would be that at least $5$ branches must reach an accept state.
 
 
 
