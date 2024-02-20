@@ -68,7 +68,7 @@ Therefore, for any $i > 1$, $xy^i z \notin L$ since it has more $($'s than $)$'s
 % PROBLEM 3
 \newproblem
 
-\textbf{Proof:} We will use the Pumping Lemma for regular languages to prove that $L$ is not regular. The Pumping Lemma states that for any regular language $L$, there exists a constant $p$ (the pumping length) such that any string $s$ in $L$ with length at least $p$ can be split into three parts, $xyz$, satisfying the following conditions:
+We will use the Pumping Lemma for regular languages to prove that $L$ is not regular. The Pumping Lemma states that for any regular language $L$, there exists a constant $p$ (the pumping length) such that any string $s$ in $L$ with length at least $p$ can be split into three parts, $xyz$, satisfying the following conditions:
 
 \begin{enumerate}
     \item For each $i \geq 0$, $xy^iz \in L$.
@@ -76,11 +76,11 @@ Therefore, for any $i > 1$, $xy^i z \notin L$ since it has more $($'s than $)$'s
     \item $|xy| \leq p$.
 \end{enumerate}
 
-Now, assume for contradiction that the language $L$ is regular. Consider the string $s = {0}^p + {1}^p = {2}^p$ in $L$. According to the Pumping Lemma, we can write $s$ as $xyz$ such that the conditions are satisfied. Let $s = xyz$ where $|xy| \leq p$ and $|y| > 0$.
+Now, assume for contradiction that the language $L$ is regular. Consider the string $s = "1+1=2"$ in $L$.
 
-Since $|xy| \leq p$, the string $y$ can only consist of $0$s or $1$s (because the other characters in $\Sigma$ are '+', '=', and digits $2$ to $9$).
+According to the Pumping Lemma, we can write $s$ as $xyz$ such that the conditions are satisfied. Let $s = xyz$ where $|xy| \leq p$ and $|y| > 0$.
 
-Now, consider the pumped string $s' = xy^2z$. Since $y$ is non-empty, the pumped string will have more $0$s or $1$s than the original string. Now, let's analyze $s'$ in terms of the given language $L$. The equation "$a+b=c$" implies that the number of occurrences of the digit '0' should be equal to the number of occurrences of the digit '1'. However, pumping $y$ will disturb this balance, leading to a string that does not satisfy the equation in $L$.
+Since $|xy| \leq p$, the string $y$ can only consist of $1$s, or the plus sign $+$ or, the equal to sign $=$. Now, consider the pumped string $s' = xy^2z$. Since $y$ is non-empty, the pumped string will have more $1$s, or plus signs, or equal signs than the original string. Now, let's analyze $s'$ in terms of the given language $L$. Pumping $y$ will disturb this balance, leading to a string that does not satisfy the equation in $L$.
 
 Therefore, $s' = xy^2z$ is not in $L$, which contradicts the Pumping Lemma. As a result, our initial assumption that $L$ is regular is false.
 
