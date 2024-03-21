@@ -60,14 +60,51 @@ X $\rightarrow$ aX $\mid$ $\epsilon$
 
 % PROBLEM 2
 \newproblem
-
+\includegraphics[scale = 0.25]{2}
 
 % PROBLEM 3
 \newproblem
 
+A context free grammar (CFG) is in Chomsky Normal Form (CNF) if all production rules satisfy one of the following conditions:
+\begin{itemize}
+    \item A non-terminal generating a terminal (e.g.; X $\rightarrow$ x)
+	\item A non-terminal generating two non-terminals (e.g.; X $\rightarrow$ YZ)
+	\item Start symbol generating $\epsilon$. (e.g.; S $\rightarrow \epsilon$)
+\end{itemize}
+
+\textbf{Step 1:} As start symbol S appears on the RHS, we will create a new production rule S0 $\rightarrow$ S. Therefore, the grammar will become:
+
+S0 $\rightarrow$ S \\
+S $\rightarrow$ aSb $\mid$ c $\mid$ SS
+
+\textbf{Step 2:} The grammar does not contain any null production.
+
+\textbf{Step 3:} The rule S $\rightarrow$ aSb violates CNF because it has a unit production (a single terminal "a") on the right-hand side and rewrites to a non-terminal (S) followed by two symbols (a terminal "b"). 
+After eliminating unit productions:
+
+S0 $\rightarrow$ aSb $\mid$ c $\mid$ SS \\
+S $\rightarrow$ aSb $\mid$ c $\mid$ SS
+
+\textbf{Step 4:} In production rule S0 $\rightarrow$ aSb and S $\rightarrow$ aSb, RHS has more than two symbols, removing it from grammar yields:
+
+S0 $\rightarrow$ XB $\mid$ c $\mid$ SS \\
+S $\rightarrow$ XB $\mid$ c $\mid$ SS \\
+X $\rightarrow$ aS \\
+B $\rightarrow$ b
+
+\textbf{Step 5:} After eliminating terminals from RHS since they exist with other terminals or non-terminals yields:
+
+S0 $\rightarrow$ XB $\mid$ c $\mid$ SS \\
+S $\rightarrow$ XB $\mid$ c $\mid$ SS \\
+X $\rightarrow$ AS \\
+A $\rightarrow$ a \\
+B $\rightarrow$ b
 
 % PROBLEM 4
 \newproblem
 
+Context-free grammar: S $\rightarrow$ SS $\mid$ aSb $\mid$ bSa $\mid$ $\epsilon$ 
+
+\includegraphics[scale = 0.25]{4}
 
 \end{document}
