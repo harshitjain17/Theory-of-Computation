@@ -1,0 +1,83 @@
+\documentclass[letterpaper,12pt]{article}
+
+\usepackage{geometry, pslatex, fancyhdr, graphicx}
+\usepackage{amsmath,amsthm,amssymb,scrextend}
+\usepackage{multicol}
+\usepackage{tabularx}
+\usepackage[makeroom]{cancel}
+\usepackage{color}
+\geometry{ margin = 1.0in }
+
+%%% TODO modify these variables as per your homework %%%
+\def\homeworknum{4}
+\def\myname{Harshit Jain}
+\def\myuserid{hmj5262}
+%%%%
+
+\pagestyle{fancy}
+\lhead{{\bf CMPSC 464 Spring 2024}}
+\chead{{\bf Assignment~\homeworknum}}
+\rhead{{\bf \today}}
+\let\newproof\proof
+\renewenvironment{proof}{\begin{addmargin}[1em]{0em}\begin{newproof}}{\end{newproof}\end{addmargin}\qed}
+
+\newcounter{problemid}
+\stepcounter{problemid}
+\def\newproblem{\clearpage\newpage{\bf Problem~\arabic{problemid}\stepcounter{problemid}}\hfill\par}
+
+\setlength\parindent{0em} 
+\setlength\parskip{8pt}
+\setlength{\fboxsep}{6pt}
+ 
+
+\begin{document}
+
+\framebox[\textwidth]{
+	\parbox{0.96\textwidth}{
+		\parbox{0.12\textwidth}{\bf Name:}\parbox{0.6\textwidth}{\myname}\\
+		\parbox{0.12\textwidth}{\bf User ID:}\parbox{0.6\textwidth}{\myuserid}
+	}
+}
+
+I collaborated with Yug Jarodiya.
+%% your solutions %%%
+
+
+% PROBLEM 1
+\newproblem
+
+\textbf{Proof by reduction}: SAT $\leq_p$ DOUBLE-SAT
+
+We will define the function $f(\phi) = \psi$ such that: $\psi = \phi \land (x \lor \overline{x})$ where $x$ is a variable that does not appear in $\phi$.
+
+If $n$ is the length of $\phi$, it will take $O(n)$ time to find a variable name that is not in $\phi$ and constant time to append “$\land (x \lor \overline{x})$” to $\phi$. Thus this reduction can be computed in polynomial time.
+
+\textbf{If} $\phi \in$ \textbf{SAT, then} $\psi \in$ \textbf{DOUBLE-SAT}. If $\phi \in$ SAT, then we know that the left side of $\psi$ is satisfiable. We can then set our new variable $x$ to True, which will satisfy $\psi$. Alternatively, we can then set our new variable $x$ to False, which will satisfy $\psi$. Thus there are at least 2 different satisfying assignments and $\psi \in$ DOUBLE-SAT.
+
+\textbf{If} $\phi \notin$ \textbf{SAT, then} $\psi \notin$ \textbf{DOUBLE-SAT}. If $\phi \notin$ SAT, then there is no way to satisfy the left side of $\psi$. Because of the $\land$ operator, this leaves us with no way to satisfy $\psi$ overall. If $\psi$ cannot be satisfied then it certainly cannot have 2 satisfying assignments and $\psi \notin$ DOUBLE-SAT.
+
+Thus, DOUBLE-SAT is in NP-HARD. Since it is in NP as well, \textbf{DOUBLE-SAT is NP-Complete}.
+
+
+% PROBLEM 2
+\newproblem
+
+First, we show that the set-partition problem belongs to NP. Given the set \( S \), our certificate is a set \( A \) which is a solution to the problem. The verification algorithm checks that \( A \subseteq S \) and that \( \sum_{x \in A} x = \sum_{x \in S\backslash A} x \). Clearly, this can be done in polynomial time.
+
+To show that the problem is NP-complete, we reduce from SUBSET-SUM. Let \( (S,t) \) be an instance of SUBSET-SUM. The problem is to determine whether there is a subset \( A \subseteq S \) such that \( t = \sum_{x \in A} x \). We construct an instance \( S_0 \) of the set-partition problem by setting \( S_0 = S \cup \{r\} \) where \( r = 2t - \sum_{x \in S} x \). Clearly, this reduction can be done in polynomial time.
+
+Now it remains to show that there is a subset of \( S \) whose sum is \( t \) if and only if \( S_0 \) can be partitioned into two distinct subsets of equal weight. First, suppose that \( A \subseteq S \) and the sum of elements in \( A \) is \( t \). But now we have \( \sum_{x \in S_0\backslash A} x = \sum_{x \in S\backslash A} x + r = 2t - \sum_{x \in A} x = 2t - t = t = \sum_{x \in A} x \). Thus, the partition into \( A \) and \( S_0 \backslash A \) is a solution to the set-partitioning problem.
+
+Now, suppose that there exists \( A \in S_0 \) such that \( \sum_{x \in A} x = \sum_{x \in S\backslash A} x \). Without loss of generality, assume that \( r \notin A \). But now we have \( 2t = \sum_{x \in S} x + r = \sum_{x \in S_0} x = \sum_{x \in A} x + \sum_{x \in S\backslash A} x = 2\sum_{x \in A} x \). Thus, \( \sum_{x \in A} x = t \) and \( A \) is a solution to the subset-sum problem.
+
+
+% PROBLEM 3
+\newproblem
+
+
+
+% PROBLEM 4
+\newproblem
+
+
+\end{document}
