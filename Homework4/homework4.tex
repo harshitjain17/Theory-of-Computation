@@ -39,7 +39,6 @@
 	}
 }
 
-I collaborated with Yug Jarodiya.
 %% your solutions %%%
 
 
@@ -74,10 +73,92 @@ Now, suppose that there exists \( A \in S_0 \) such that \( \sum_{x \in A} x = \
 % PROBLEM 3
 \newproblem
 
+\textbf{Algorithm to Find the Largest Clique Using k-CLIQUE Black Box:}
 
+\begin{enumerate}
+    \item \textbf{Initialization}: Let \( n \) be the number of vertices in the graph \( G \). Set \( \textit{lower} = 0 \) and \( \textit{upper} = n \) which are the bounds for the clique size search.
+    \item \textbf{Binary Search for Maximum Clique Size}: Perform a binary search between \( \textit{lower} \) and \( \textit{upper} \) to find the largest value \( k \) for which k-CLIQUE returns yes.
+    \item While \( \textit{lower} < \textit{upper} \):
+    \begin{itemize}
+        \item Set \( \textit{mid} = \lceil (\textit{lower} + \textit{upper} + 1) / 2 \rceil \) (using the upper middle to avoid infinite loop).
+        \item If k-CLIQUE(\( G, \textit{mid} \)) returns yes, set \( \textit{lower} = \textit{mid} \) (since at least a clique of size \( \textit{mid} \) exists).
+        \item If k-CLIQUE(\( G, \textit{mid} \)) returns no, set \( \textit{upper} = \textit{mid} - 1 \) (since no clique of size \( \textit{mid} \) exists and we lower the search space by one to avoid infinite loop in the case where upper-middle is used).
+    \end{itemize}
+    \item After the loop, \( \textit{lower} \) will be equal to the largest clique size.
+    \item \textbf{Identifying the Vertices}:
+    \begin{itemize}
+        \item Start with the subgraph \( G' \) of \( G \) that includes all \( n \) vertices.
+        \item For each vertex \( v \) in \( G' \), test if the graph \( G' - \{v\} \) (which is \( G' \) without the vertex \( v \) and its incident edges) contains a clique of size \( \textit{lower} \) by calling k-CLIQUE(\( G' - \{v\}, \textit{lower} \)).
+        \item If it does, remove the vertex \( v \) from \( G' \), since \( v \) is not part of the maximum clique of size \( \textit{lower} \).
+        \item Repeat this process until all vertices in \( G' \) are part of the maximum clique.
+    \end{itemize}
+    \item \textbf{Output}: The remaining graph \( G' \) consists of the vertices in the largest clique.
+\end{enumerate}
+
+\textbf{Correctness}: The binary search ensures we find the largest \( k \) for which a \( k \)-clique exists in the graph. Since the black box runs in polynomial time and binary search takes \( O(\log n) \) iterations with each iteration taking polynomial time, the maximum clique size is found in polynomial time. The second part iteratively removes vertices that are not part of the maximum clique, taking \( O(n) \) uses of the k-CLIQUE black box, which each takes polynomial time. Therefore, the whole process runs in polynomial time.
+
+\textbf{Polynomial Time}: The overall algorithm is polynomial because:
+\begin{itemize}
+    \item The binary search for the maximum clique size has \( O(\log n) \) iterations.
+    \item Each call to k-CLIQUE is polynomial.
+    \item Identifying the vertices in the clique involves \( n \) calls to k-CLIQUE and a constant amount of work for each vertex.
+\end{itemize}
+
+Therefore, the algorithm calls the k-CLIQUE black box \( O(n \log n) \) times, and since each call is polynomial, the overall algorithm is polynomial.
 
 % PROBLEM 4
 \newproblem
+
+% \underline{Step 1:}
+
+% To show that the set of weakly decreasing infinite sequences of natural numbers is countable, we can use the fact that the set of sequences is countable if the elements of the sequences are drawn from a countable set, such as the set of natural numbers.
+
+% Let's build an enumeration-based proof. We aim to establish a one-to-one relationship between the set of weakly decreasing infinite sequences and a subset of the set of all infinite sequences of natural numbers. In a weakly declining sequence, each element can either take one of the natural numbers or zero. These may be thought of as possibilities for each sequence element. Now, compile a list of natural numbers that might be used for each member of the sequence. Include the possibility of zero as well. A countable set is produced for each element as a consequence.
+
+% \underline{Step 2:}
+
+% For the first element, the set of choices is $\{0, 1, 2, 3, \ldots\}$. For the second element, the set is $\{0, 1, 2, 3, \ldots\}$, and so on.
+
+% Now, we can enumerate the elements of the sequences. Consider the sequences with the first element. We can list them in the following way:
+% \begin{align*}
+% &\text{Sequence 1:} (0, 0, 0, 0, 0, \ldots) \\
+% &\text{Sequence 2:} (1, 0, 0, 0, 0, \ldots) \\
+% &\text{Sequence 3:} (2, 0, 0, 0, 0, \ldots) \\
+% &\text{Sequence 4:} (3, 0, 0, 0, 0, \ldots) \\
+% &\ldots
+% \end{align*}
+% For each of these sequences, you can continue to list all possible sequences for the second element in the same way:
+% \begin{align*}
+% &\text{Sequence 1:} (0, 0, 0, 0, 0, \ldots) \\
+% &\text{Sequence 2:} (1, 0, 0, 0, 0, \ldots) \\
+% &\text{Sequence 3:} (2, 0, 0, 0, 0, \ldots) \\
+% &\text{Sequence 4:} (3, 0, 0, 0, 0, \ldots) \\
+% &\ldots
+% \end{align*}
+
+% \underline{Step 3:}
+
+% This procedure may be repeated for every component of the sequence to create a nested enumeration. Consider a random weakly decreasing sequence at this point. In this nested enumeration, it corresponds to a singular location. A one-to-one relationship between the set of weakly decreasing infinite sequences and a subset of the set of all countable infinite sequences of natural numbers has been established by this enumeration.
+
+% \underline{Final Answer:}
+
+% Therefore, the set of weakly decreasing infinite sequences of natural numbers is indeed countable.
+
+To show that the set of weakly decreasing infinite sequences of natural numbers is countable, we can use a correspondence between these sequences and partitions of integers, which are known to be countable.
+
+\begin{itemize}
+    \item Step 1: Consider each weakly decreasing sequence as a representation of the multiset coefficients of an infinite polynomial series with nonnegative integer coefficients of the form \((1 + x + x^2 + x^3 + \ldots)^n\), where \(n\) is a nonnegative integer.
+
+    \item Step 2: The first element of the sequence, \(a_1\), can be any natural number, including zero. We map each sequence to a polynomial where powers of \(x\) up to \(x^{a_1}\) have a coefficient of 1, and the others are 0.
+
+    \item Step 3: Given that weakly decreasing sequences will eventually become a sequence of zeros, this is equivalent to the sequence having a finite number of nonzero terms followed by zeros indefinitely, which confirms the mapping to polynomials is valid. 
+
+    \item Step 4: This constructs a one-to-one correspondence between each weakly decreasing sequence and a unique partition of a natural number, given by the sum of exponents with nonzero coefficients in the associated polynomial.
+
+    \item Step 5: As the set of partitions of any natural number is countable and we have established a one-to-one correspondence with weakly decreasing sequences, it follows that the set of these sequences is also countable.
+\end{itemize}
+
+Hence, by demonstrating a bijective relation to the countable set of partitions of natural numbers, we conclude that the set of weakly decreasing infinite sequences of natural numbers is countable.
 
 
 \end{document}
