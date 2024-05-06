@@ -1,0 +1,89 @@
+\documentclass[letterpaper,12pt]{article}
+
+\usepackage{geometry, pslatex, fancyhdr, graphicx}
+\usepackage{amsmath,amsthm,amssymb,scrextend}
+\usepackage{multicol}
+\usepackage{tabularx}
+\usepackage[makeroom]{cancel}
+\usepackage{color}
+\usepackage{algorithm}
+\usepackage{algorithmic}
+\usepackage{mdframed}
+
+\geometry{ margin = 1.0in }
+
+%%% TODO modify these variables as per your homework %%%
+\def\myname{Harshit Jain}
+\def\myuserid{hmj5262}
+%%%%
+
+\pagestyle{fancy}
+\lhead{{\bf CMPSC 464 Spring 2024}}
+\chead{{\bf Extra Credit Assignment}}
+\rhead{{\bf \today}}
+\let\newproof\proof
+\renewenvironment{proof}{\begin{addmargin}[1em]{0em}\begin{newproof}}{\end{newproof}\end{addmargin}\qed}
+
+\newcounter{problemid}
+\stepcounter{problemid}
+\def\newproblem{\clearpage\newpage{\bf Problem~\arabic{problemid}\stepcounter{problemid}}\hfill\par}
+
+\setlength\parindent{0em} 
+\setlength\parskip{8pt}
+\setlength{\fboxsep}{6pt}
+ 
+
+\begin{document}
+
+\framebox[\textwidth]{
+	\parbox{0.96\textwidth}{
+		\parbox{0.12\textwidth}{\bf Name:}\parbox{0.6\textwidth}{\myname}\\
+		\parbox{0.12\textwidth}{\bf User ID:}\parbox{0.6\textwidth}{\myuserid}
+	}
+}
+
+%% your solutions %%%
+
+
+% PROBLEM 1
+\newproblem
+
+\begin{algorithm}
+    \caption{Checking for Infinite Strings in a DFA}
+    \begin{algorithmic}
+    \STATE \textbf{Function} \textsc{HasInfiniteStrings}(DFA):
+        \STATE visited\_states $\gets$ empty set
+        \STATE stack $\gets$ [initial\_state]
+    
+        \WHILE{stack \textbf{is not} empty}
+            \STATE current\_state $\gets$ pop(stack)
+            \STATE \textbf{Add} current\_state \textbf{to} visited\_states
+    
+            \FOR{each transition (current\_state, input\_symbol, next\_state) \textbf{in} DFA}
+                \IF{next\_state \textbf{is in} visited\_states}
+                    \RETURN \textbf{true}
+                \ELSIF{next\_state \textbf{is not in} stack}
+                    \STATE push next\_state \textbf{to} stack
+                \ENDIF
+            \ENDFOR
+        \ENDWHILE
+    
+        \RETURN \textbf{false}
+    \end{algorithmic}
+\end{algorithm}
+    
+\begin{enumerate}
+    \item \textbf{Function Definition}: The function definition for \textsc{HasInfiniteStrings} which takes a DFA as input and returns a boolean value indicating whether the DFA accepts an infinite number of strings.
+    
+    \item \textbf{Initialization}: Inside the function, we initialize an empty set named $visited\_states$ to keep track of visited states during the DFS traversal. We also initialize a stack named $stack$ with the initial state of the DFA.
+    
+    \item \textbf{DFS Traversal}: The algorithm enters a while loop that continues until the stack is empty. In each iteration of the loop, it pops the top state ($current\_state$) from the stack.
+    
+    \item \textbf{Flag Visited States}: The current state is then added to the $visited\_states$ set to mark it as visited.
+    
+    \item \textbf{Transition Exploration}: For each transition originating from the current state in the DFA, the algorithm checks whether the next state ($next\_state$) has already been visited. If it has been visited, that means there is a loop, and the function returns \textbf{true} indicating that the DFA accepts an infinite number of strings. If the next state has not been visited, it is pushed onto the stack for further exploration.
+    
+    \item \textbf{Termination}: If the while loop completes without finding any loop, the function returns \textbf{false}, indicating that the DFA accepts a finite number of strings.
+\end{enumerate}
+
+\end{document}
